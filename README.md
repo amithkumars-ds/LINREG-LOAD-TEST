@@ -93,3 +93,15 @@ Planned activities:
 - Document findings and present experimental results.
 
 **Status:** Planned
+
+
+
+
+# Tradeoffs
+
+**1. Streamlit vs React vs HTML/CSS**:The primary objective is to evaluate backend performance and infrastructure limitations. React was not selected because it introduces an additional frontend framework, build tooling, and dependencies that are unnecessary for a simple, single-input prediction interface. Similarly, Streamlit was not chosen because its application runtime introduces additional resource overhead, potentially increasing memory and CPU consumption and affecting overall application performance.
+
+HTML/CSS was preferred as a lightweight alternative, minimizing frontend complexity and resource consumption while allowing the study to focus on backend performance and infrastructure constraints.  
+
+
+
