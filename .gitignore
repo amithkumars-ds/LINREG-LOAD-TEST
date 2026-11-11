@@ -3,3 +3,4 @@ data/
 
 # local
 plans/
+.DS_Store
