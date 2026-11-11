@@ -4,3 +4,7 @@ data/
 # local
 plans/
 .DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
