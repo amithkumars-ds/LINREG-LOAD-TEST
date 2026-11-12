@@ -1,0 +1,6 @@
+data/
+plans/
+notes.txt
+__pycache__/*
+.py[cod]
+.git/
