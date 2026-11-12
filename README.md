@@ -34,7 +34,7 @@ costs.
 - **Integration:** Connected the React frontend to the FastAPI inference service.
 - **Validation:** Successfully tested the end-to-end prediction workflow in the local development environment.
 
-**Status:** Planned
+**Status:** Completed
 
 
 
@@ -51,9 +51,6 @@ Planned activities:
 
 **Status:** Planned
 
-**Architecture**
-
-![](plans/1_deployment_plan.jpeg)
 
 ## Phase 4: Concurrency & Performance Experiments
 
@@ -97,11 +94,24 @@ Planned activities:
 
 
 
-# Tradeoffs
+# Trade-offs and Design Decisions
 
-**1. Streamlit vs React vs HTML/CSS**:The primary objective is to evaluate backend performance and infrastructure limitations. React was not selected because it introduces an additional frontend framework, build tooling, and dependencies that are unnecessary for a simple, single-input prediction interface. Similarly, Streamlit was not chosen because its application runtime introduces additional resource overhead, potentially increasing memory and CPU consumption and affecting overall application performance.
+### 1. Streamlit vs. React vs. HTML/CSS
 
-HTML/CSS was preferred as a lightweight alternative, minimizing frontend complexity and resource consumption while allowing the study to focus on backend performance and infrastructure constraints.  
+The primary objective of this project is to evaluate backend performance and identify infrastructure limitations. With this in mind, React was not selected because it introduces an additional frontend framework, build tooling, and dependencies that are unnecessary for a simple, single-input prediction interface.
 
+Similarly, Streamlit was not chosen because its application runtime introduces additional resource overhead, potentially increasing CPU and memory consumption and impacting overall application performance.
 
+Instead, **HTML/CSS was chosen as a lightweight alternative** to minimize frontend complexity and resource consumption. This allows the study to focus primarily on backend performance and infrastructure constraints without introducing unnecessary frontend overhead.
 
+### 2. EC2 vs. ECR for Deployment
+
+For deployment, I opted for a simpler approach:
+
+**GitHub → EC2 → Docker Build → Docker Run**
+
+Rather than building a Docker image locally and pushing it to Amazon Elastic Container Registry (ECR), the application code will be pulled directly from GitHub onto the EC2 instance, where the Docker image will be built and executed.
+
+Although ECR provides benefits such as centralized image storage, versioning, and easier image distribution across multiple environments, it introduces an additional service and deployment step.
+
+Given the scope of this project, deploying directly on EC2 offers a simpler workflow with fewer dependencies and less infrastructure overhead, while remaining sufficient for evaluating application performance and infrastructure limitations.
