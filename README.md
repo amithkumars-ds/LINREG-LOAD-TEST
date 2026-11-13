@@ -49,7 +49,7 @@ Planned activities:
 - Configure networking, security groups and application access.
 - Establish application and infrastructure monitoring using CloudWatch.
 
-**Status:** Planned
+**Status:** Completed
 
 
 ## Phase 4: Concurrency & Performance Experiments
@@ -63,22 +63,10 @@ Planned activities:
 - Monitor CPU and memory utilization.
 - Identify application and infrastructure bottlenecks.
 
-**Status:** Planned
+**Status:**  In Progress
 
-## Phase 5: Horizontal Scaling & Load Distribution
 
-**Objective:** Evaluate application scalability through distributed infrastructure.
-
-Planned activities:
-- Configure an AWS Application Load Balancer.
-- Deploy multiple EC2 instances.
-- Configure target groups and health checks.
-- Implement Auto Scaling Groups.
-- Compare performance across different scaling configurations.
-
-**Status:** Planned
-
-## Phase 6: Performance Analysis & Cost Optimization
+## Phase 5: Performance Analysis & Cost Optimization
 
 **Objective:** Analyze experimental results and evaluate infrastructure efficiency.
 
