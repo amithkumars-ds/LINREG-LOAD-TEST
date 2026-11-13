@@ -5,7 +5,11 @@ data/
 plans/
 .DS_Store
 notes.txt
+experiments/
+results/
+linreg-loadtest-accesskey.pem
 
 # Python cache
 __pycache__/
 *.py[cod]
+
