@@ -11,6 +11,8 @@ bottlenecks, understand infrastructure limitations,
 evaluate scaling strategies, and analyze the associated AWS operational 
 costs.
 
+Watch complete results breakdown on [youtube](https://www.youtube.com/watch?v=onX_M8vYrHY).
+
 ## Architecture
 
 ![](artifacts/Experiment_Process.png)
